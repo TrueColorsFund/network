@@ -1,7 +1,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.truecolorsfund.app" version="1.0.0">
-  <name>True Colors Fund</name>
-  <description>The True Colors Fund works to end homelessness among lesbian, gay, bisexual, and transgender youth, creating a world in which young people can be their true selves.</description>
-  <author href="http://truecolorsfund.org" email="info@truecolorsfund.org">True Colors Fund, Inc.</author>
+  <name>Forty to None Network</name>
+  <description>The Forty to None Network is the True Colors Fund's online community for professionals who are working to address LGBT youth homelessness.</description>
+  <author href="http://truecolorsfund.org" email="tech@truecolorsfund.org">True Colors Fund, Inc.</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
