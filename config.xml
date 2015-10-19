@@ -3,6 +3,8 @@
   <description>The Forty to None Network is the True Colors Fund's online community for professionals who are working to address LGBT youth homelessness.</description>
   <author href="http://truecolorsfund.org" email="tech@truecolorsfund.org">True Colors Fund, Inc.</author>
   <content src="index.html"/>
+  
+  <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
   <preference name="target-device" value="universal"/>
@@ -18,25 +20,28 @@
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
-  <gap:plugin name="org.apache.cordova.battery-status"/>
-  <gap:plugin name="org.apache.cordova.camera"/>
-  <gap:plugin name="org.apache.cordova.media-capture"/>
-  <gap:plugin name="org.apache.cordova.console"/>
-  <gap:plugin name="org.apache.cordova.contacts"/>
-  <gap:plugin name="org.apache.cordova.device"/>
-  <gap:plugin name="org.apache.cordova.device-motion"/>
-  <gap:plugin name="org.apache.cordova.device-orientation"/>
-  <gap:plugin name="org.apache.cordova.dialogs"/>
-  <gap:plugin name="org.apache.cordova.file"/>
-  <gap:plugin name="org.apache.cordova.file-transfer"/>
-  <gap:plugin name="org.apache.cordova.geolocation"/>
-  <gap:plugin name="org.apache.cordova.globalization"/>
-  <gap:plugin name="org.apache.cordova.inappbrowser"/>
-  <gap:plugin name="org.apache.cordova.media"/>
-  <gap:plugin name="org.apache.cordova.network-information"/>
-  <gap:plugin name="org.apache.cordova.splashscreen"/>
-  <gap:plugin name="org.apache.cordova.vibration"/>
-  <gap:plugin name="com.phonegap.plugins.pushplugin"/>
+  <preference name="SplashScreenDelay" value="10000" />
+  
+  <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
+  <gap:plugin name="org.apache.cordova.camera" source="npm" />
+  <gap:plugin name="org.apache.cordova.media-capture" source="npm" />
+  <gap:plugin name="org.apache.cordova.console" source="npm" />
+  <gap:plugin name="org.apache.cordova.contacts" source="npm" />
+  <gap:plugin name="org.apache.cordova.device" source="npm" />
+  <gap:plugin name="org.apache.cordova.device-motion" source="npm" />
+  <gap:plugin name="org.apache.cordova.device-orientation" source="npm" />
+  <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+  <gap:plugin name="org.apache.cordova.file" source="npm" />
+  <gap:plugin name="org.apache.cordova.file-transfer" source="npm" />
+  <gap:plugin name="org.apache.cordova.geolocation" source="npm" />
+  <gap:plugin name="org.apache.cordova.globalization" source="npm" />
+  <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+  <gap:plugin name="org.apache.cordova.media" source="npm" />
+  <gap:plugin name="org.apache.cordova.network-information" source="npm" />
+  <gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
+  <gap:plugin name="org.apache.cordova.vibration" source="npm" />
+  <gap:plugin name="com.phonegap.plugins.pushplugin" source="npm" />
+  
   <icon src="icon.png"/>
   <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
@@ -54,6 +59,7 @@
   <icon src="res/icon/webos/icon-64.png" gap:platform="webos"/>
   <icon src="res/icon/windows-phone/icon-48.png" gap:platform="winphone"/>
   <icon src="res/icon/windows-phone/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
+  
   <gap:splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
   <gap:splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
   <gap:splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
@@ -73,8 +79,9 @@
   <gap:splash src="res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768"/>
   <gap:splash src="res/screen/ios/screen-ipad-landscape-2x.png" gap:platform="ios" width="2014" height="1536"/>
   <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
+  
   <access origin="*"/>
-  <plugin name="cordova-plugin-whitelist" version="1"/>
+  <plugin name="cordova-plugin-whitelist" version="1" source="npm" />
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <allow-intent href="tel:*"/>
@@ -111,6 +118,6 @@
     <splash src="res/screen/ios/screen-ipad-landscape-2x.png" width="2048" height="1536"/>
 </platform>
 
-<preference name="SplashScreenDelay" value="10000" />
+
 
 </widget>
