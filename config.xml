@@ -2,7 +2,7 @@
   <name>Forty to None Network</name>
   <description>The Forty to None Network is the True Colors Fund's online community for professionals who are working to address LGBT youth homelessness.</description>
   <author href="http://truecolorsfund.org" email="tech@truecolorsfund.org">True Colors Fund, Inc.</author>
-  <content src="index.html"/>
+  <content src="index.min.html"/>
   
   <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="permissions" value="none"/>
@@ -16,11 +16,10 @@
   <preference name="detect-data-types" value="true"/>
   <preference name="exit-on-suspend" value="false"/>
   <preference name="show-splash-screen-spinner" value="true"/>
-  <preference name="auto-hide-splash-screen" value="true"/>
+  <preference name="auto-hide-splash-screen" value="false"/>
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
-  <preference name="SplashScreenDelay" value="10000" />
   
   <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
   <gap:plugin name="org.apache.cordova.camera" source="npm" />
@@ -80,17 +79,21 @@
   <gap:splash src="res/screen/ios/screen-ipad-landscape-2x.png" gap:platform="ios" width="2014" height="1536"/>
   <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
   
-  <access origin="*"/>
+  
   <plugin name="cordova-plugin-whitelist" version="1" source="npm" />
+  <access origin="*"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <allow-intent href="tel:*"/>
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
-
+  <allow-intent href="market:*"/>
+  <allow-intent href="itms:*"/>
+  <allow-intent href="itms-apps:*"/>
+  
   <platform name="android">
-    <allow-intent href="market:*"/>
+    
     <!-- you can use any density that exists in the Android project -->
     <splash src="res/screen/android/screen-hdpi-landscape.png" density="land-hdpi"/>
     <splash src="res/screen/android/screen-ldpi-landscape.png" density="land-ldpi"/>
@@ -104,8 +107,7 @@
 </platform>
 
 <platform name="ios">
-    <allow-intent href="itms:*"/>
-    <allow-intent href="itms-apps:*"/>
+    
     <!-- images are determined by width and height. The following are supported -->
     <splash src="res/screen/ios/screen-iphone-landscape.png" width="320" height="480"/>
     <splash src="res/screen/ios/screen-iphone-portrait.png" width="480" height="320"/>
@@ -118,6 +120,7 @@
     <splash src="res/screen/ios/screen-ipad-landscape-2x.png" width="2048" height="1536"/>
 </platform>
 
+  
 
 
 </widget>
