@@ -3,7 +3,6 @@
   <description>The Forty to None Network is the True Colors Fund's online community for professionals who are working to address LGBT youth homelessness.</description>
   <author href="https://truecolorsfund.org" email="tech@truecolorsfund.org">True Colors Fund, Inc.</author>
   <content src="index.html"/>
-  
   <preference name="phonegap-version" value="cli-5.1.1" />
   <preference name="android-minSdkVersion" value="16" />
   <preference name="android-build-tool" value="ant" />
@@ -40,7 +39,7 @@
   <gap:plugin name="org.apache.cordova.network-information" source="npm" version="0.2.15" />
   <gap:plugin name="org.apache.cordova.splashscreen" source="npm" version="1.0.0" />
   <gap:plugin name="org.apache.cordova.vibration" source="npm" version="0.3.13" />
-  <gap:plugin name="phonegap-plugin-push" source="npm" version="1.2.3" />
+  <gap:plugin name="com.phonegap.plugins.pushplugin"/>
   
   <icon src="icon.png"/>
   <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
@@ -49,13 +48,13 @@
   <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi"/>
   <icon src="res/icon/blackberry/icon-80.png" gap:platform="blackberry"/>
   <icon src="res/icon/blackberry/icon-80.png" gap:platform="blackberry" gap:state="hover"/>
-  <icon src="res/icon/ios/icon-57.png" gap:platform="ios" width="57" height="57" gap:qualifier="ldpi"/>
-  <icon src="res/icon/ios/icon-72.png" gap:platform="ios" width="72" height="72" gap:qualifier="mdpi"/>
-  <icon src="res/icon/ios/icon-76.png" gap:platform="ios" width="76" height="76" gap:qualifier="mdpi"/>
-  <icon src="res/icon/ios/icon-120.png" gap:platform="ios" width="120" height="120" gap:qualifier="hdpi"/>
-  <icon src="res/icon/ios/icon-57-2x.png" gap:platform="ios" width="114" height="114" gap:qualifier="xhdpi"/>
-  <icon src="res/icon/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" gap:qualifier="xhdpi"/>
-  <icon src="res/icon/ios/icon-76-2x.png" gap:platform="ios" width="152" height="152" gap:qualifier="xhdpi"/>
+  <icon src="res/icon/ios/icon-57.png" gap:platform="ios" width="57" height="57" />
+  <icon src="res/icon/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+  <icon src="res/icon/ios/icon-76.png" gap:platform="ios" width="76" height="76" />
+  <icon src="res/icon/ios/icon-120.png" gap:platform="ios" width="120" height="120" />
+  <icon src="res/icon/ios/icon-57-2x.png" gap:platform="ios" width="114" height="114" />
+  <icon src="res/icon/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" />
+  <icon src="res/icon/ios/icon-76-2x.png" gap:platform="ios" width="152" height="152" />
   <icon src="res/icon/webos/icon-64.png" gap:platform="webos"/>
   <icon src="res/icon/windows-phone/icon-48.png" gap:platform="winphone"/>
   <icon src="res/icon/windows-phone/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
