@@ -6,6 +6,7 @@
   
   <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="android-minSdkVersion" value="16" />
+  <preference name="android-build-tool" value="ant" />
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
   <preference name="target-device" value="universal"/>
