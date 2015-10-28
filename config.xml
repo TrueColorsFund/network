@@ -4,7 +4,7 @@
   <author href="https://truecolorsfund.org" email="tech@truecolorsfund.org">True Colors Fund, Inc.</author>
   <content src="index.html"/>
   
-  <preference name="phonegap-version" value="cli-5.1.1" />
+  <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="android-minSdkVersion" value="11" />
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
