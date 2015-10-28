@@ -4,7 +4,7 @@
   <author href="https://truecolorsfund.org" email="tech@truecolorsfund.org">True Colors Fund, Inc.</author>
   <content src="index.html"/>
   
-  <preference name="phonegap-version" value="cli-5.2.0" />
+  <preference name="phonegap-version" value="cli-5.1.1" />
   <preference name="android-minSdkVersion" value="16" />
   <preference name="android-build-tool" value="ant" />
   <preference name="permissions" value="none"/>
@@ -40,6 +40,7 @@
   <gap:plugin name="org.apache.cordova.network-information" source="npm" version="0.2.15" />
   <gap:plugin name="org.apache.cordova.splashscreen" source="npm" version="1.0.0" />
   <gap:plugin name="org.apache.cordova.vibration" source="npm" version="0.3.13" />
+  <gap:plugin name="phonegap-plugin-push" source="npm" version="1.2.3" />
   
   <icon src="icon.png"/>
   <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
