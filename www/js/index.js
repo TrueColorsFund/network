@@ -34,6 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        initPushwoosh();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,3 +48,27 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+function initPushwoosh(){
+    var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
+
+    document.addEventListener('push-notification', function(event) {
+        var title = event.notification.title;
+        var userData = event.notification.userdata;
+
+        if(typeof(userData) != "undefined") {
+          console.warn('user data: ' + JSON.stringify(userData));
+        }
+        alert(title);
+    });
+    pushNotification.onDeviceReady({ projectid: "745040594426", pw_appid : "229B5-59643" });
+
+    pushNotification.registerDevice(
+        function(status) {
+            var pushToken = status;
+            console.warn('push token: ' + pushToken);
+        },
+        function(status) {
+            console.warn(JSON.stringify(['failed to register ', status]));
+        }
+    );
+}

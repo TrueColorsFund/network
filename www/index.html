@@ -38,40 +38,11 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-          function initPushwoosh()
-          {
-              var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
-
-              //set push notifications handler
-              document.addEventListener('push-notification', function(event) {
-                  var title = event.notification.title;
-                  var userData = event.notification.userdata;
-
-                  if(typeof(userData) != "undefined") {
-                      console.warn('user data: ' + JSON.stringify(userData));
-                  }
-
-                  alert(title);
-              });
-              pushNotification.onDeviceReady({ projectid: "745040594426", pw_appid : "229B5-59643" });
-
-              //register for pushes
-              pushNotification.registerDevice(
-                  function(status) {
-                      var pushToken = status;
-                      console.warn('push token: ' + pushToken);
-                  },
-                  function(status) {
-                      console.warn(JSON.stringify(['failed to register ', status]));
-                  }
-              );
-          }
           function onLoad(){
             document.addEventListener("deviceready", onDeviceReady, true);
           }
 
           function onDeviceReady(){
-            initPushwoosh();
             window.open('https://truecolorsfund.org/?appp=1', '_self', 'location=no');
             //navigator.notification.alert("Welcome to True Colors Fund");
             app.initialize();
