@@ -41,6 +41,7 @@
   <plugin name="org.apache.cordova.splashscreen" source="npm" spec="1.0.0" />
   <plugin name="org.apache.cordova.vibration" source="npm" spec="0.3.13" />
   <plugin name="pushwoosh-pgb-plugin" source="npm" />
+  <plugin name="com.phonegap.plugins.pushplugin"/>
   <plugin name="cordova-plugin-whitelist" spec="1"/>
   
   <icon src="icon.png"/>
