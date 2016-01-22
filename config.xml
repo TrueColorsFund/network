@@ -41,7 +41,7 @@
   <plugin name="org.apache.cordova.network-information" source="npm" spec="0.2.15" />
   <plugin name="org.apache.cordova.splashscreen" source="npm" spec="1.0.0" />
   <plugin name="org.apache.cordova.vibration" source="npm" spec="0.3.13" />
-  <plugin name="phonegap-plugin-push" source="npm" spec="1.5.3" />
+  <plugin name="phonegap-plugin-push" source="npm" spec="1.5.2" />
   <plugin name="cordova-plugin-whitelist" spec="1"/>
   
   <icon src="icon.png"/>
