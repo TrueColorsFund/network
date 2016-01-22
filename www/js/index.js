@@ -50,7 +50,7 @@ var app = {
 };
 function initPushwoosh(){
     var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
-    /*
+    
     document.addEventListener('push-notification', function(event) {
         var title = event.notification.title;
         var userData = event.notification.userdata;
@@ -58,11 +58,11 @@ function initPushwoosh(){
         if(typeof(userData) != "undefined") {
           console.warn('user data: ' + JSON.stringify(userData));
         }
-        alert(title);
+        //alert(title);
     });
-    */
+    
     pushNotification.onDeviceReady({ projectid: "745040594426", pw_appid : "229B5-59643" });
-    /*
+    
     pushNotification.registerDevice(
         function(status) {
             var pushToken = status;
@@ -72,5 +72,5 @@ function initPushwoosh(){
             console.warn(JSON.stringify(['failed to register ', status]));
         }
     );
-    */
+    
 }
