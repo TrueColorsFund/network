@@ -50,11 +50,6 @@
   <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi"/>
   <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi"/>
   
-  <splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
-  <splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
-  <splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
-  <splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
-  
   <icon src="res/icon/blackberry/icon-80.png" gap:platform="blackberry"/>
   <icon src="res/icon/blackberry/icon-80.png" gap:platform="blackberry" gap:state="hover"/>
   <icon src="res/icon/webos/icon-64.png" gap:platform="webos"/>
@@ -78,6 +73,10 @@
   
   <platform name="android">
     <allow-intent href="market:*"/>
+    <splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
+    <splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
+    <splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
+    <splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
   </platform>
   
   <platform name="ios">
