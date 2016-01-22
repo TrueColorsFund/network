@@ -60,6 +60,8 @@
   <splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
   
   <access origin="*.pushwoosh.com" />
+  <access origin="*.gravatar.com" />
+  <access origin="*.bootstrapcdn.com/font-awesome" />
   <access origin="https://truecolorsfund.org/?appp=1" subdomains="true" />\
   <access uri="https://truecolorsfund.org/?appp=1" subdomains="true" />
   
