@@ -61,7 +61,7 @@ function initPushwoosh(){
         alert(title);
     });
     pushNotification.onDeviceReady({ projectid: "745040594426", pw_appid : "229B5-59643" });
-
+    /*
     pushNotification.registerDevice(
         function(status) {
             var pushToken = status;
@@ -71,4 +71,5 @@ function initPushwoosh(){
             console.warn(JSON.stringify(['failed to register ', status]));
         }
     );
+    */
 }
