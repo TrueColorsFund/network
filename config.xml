@@ -4,9 +4,8 @@
   <author href="https://truecolorsfund.org" email="tech@truecolorsfund.org">True Colors Fund, Inc.</author>
   <content src="index.html"/>
   
-  <preference name="phonegap-version" value="cli-5.1.1" />
-  <preference name="android-minSdkVersion" value="16" />
-  <preference name="android-minSdkVersion" value="16" />
+  <preference name="phonegap-version" value="cli-5.2.0" />
+  <preference name="android-minSdkVersion" value="9" />
   <preference name="android-build-tool" value="gradle" />
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
@@ -45,6 +44,17 @@
   <plugin name="cordova-plugin-whitelist" spec="1"/>
   
   <icon src="icon.png"/>
+  
+  <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi"/>
+  <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi"/>
+  <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi"/>
+  <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi"/>
+  
+  <splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
+  <splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
+  <splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
+  <splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
+  
   <icon src="res/icon/blackberry/icon-80.png" gap:platform="blackberry"/>
   <icon src="res/icon/blackberry/icon-80.png" gap:platform="blackberry" gap:state="hover"/>
   <icon src="res/icon/webos/icon-64.png" gap:platform="webos"/>
@@ -68,14 +78,6 @@
   
   <platform name="android">
     <allow-intent href="market:*"/>
-    <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi"/>
-    <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi"/>
-    <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi"/>
-    <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi"/>
-    <splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
-    <splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
-    <splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
-    <splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
   </platform>
   
   <platform name="ios">
