@@ -58,7 +58,7 @@ function initPushwoosh(){
         if(typeof(userData) != "undefined") {
           console.warn('user data: ' + JSON.stringify(userData));
         }
-        //alert(title);
+        alert(title);
     });
     
     pushNotification.onDeviceReady({ projectid: "745040594426", pw_appid : "229B5-59643" });
