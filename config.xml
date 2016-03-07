@@ -1,102 +1,117 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.truecolorsfund.network" version="1.7.0">
-  <name>Forty to None Network</name>
-  <description>The Forty to None Network is the True Colors Fund's online community for professionals who are working to address LGBT youth homelessness.</description>
-  <author href="https://truecolorsfund.org" email="tech@truecolorsfund.org">True Colors Fund, Inc.</author>
-  <content src="index.html"/>
-  
-  <preference name="phonegap-version" value="cli-5.2.0" />
-  <preference name="android-minSdkVersion" value="9" />
-  <preference name="android-build-tool" value="gradle" />
-  <preference name="permissions" value="none"/>
-  <preference name="orientation" value="default"/>
-  <preference name="target-device" value="universal"/>
-  <preference name="fullscreen" value="true"/>
-  <preference name="webviewbounce" value="true"/>
-  <preference name="prerendered-icon" value="true"/>
-  <preference name="stay-in-webview" value="false"/>
-  <preference name="ios-statusbarstyle" value="black-opaque"/>
-  <preference name="detect-data-types" value="true"/>
-  <preference name="exit-on-suspend" value="false"/>
-  <preference name="show-splash-screen-spinner" value="true"/>
-  <preference name="auto-hide-splash-screen" value="true"/>
-  <preference name="disable-cursor" value="false"/>
-  <preference name="android-installLocation" value="auto"/>
-  
-  <plugin name="org.apache.cordova.battery-status" source="npm" spec="0.2.12" />
-  <plugin name="org.apache.cordova.camera" source="npm" spec="0.3.6" />
-  <plugin name="org.apache.cordova.console" source="npm" spec="0.2.13" />
-  <plugin name="org.apache.cordova.contacts" source="npm" spec="0.2.16" />
-  <plugin name="org.apache.cordova.device" source="npm" spec="0.3.0" />
-  <plugin name="org.apache.cordova.device-motion" source="npm" spec="0.2.11" />
-  <plugin name="org.apache.cordova.device-orientation" source="npm" spec="0.3.11" />
-  <plugin name="org.apache.cordova.dialogs" source="npm" spec="0.3.0" />
-  <plugin name="org.apache.cordova.file" source="npm" spec="1.3.3" />
-  <plugin name="org.apache.cordova.file-transfer" source="npm" spec="0.5.0" />
-  <plugin name="org.apache.cordova.geolocation" source="npm" spec="0.3.12" />
-  <plugin name="org.apache.cordova.globalization" source="npm" spec="0.3.4" />
-  <plugin name="org.apache.cordova.inappbrowser" source="npm" spec="0.6.0" />
-  <plugin name="org.apache.cordova.media" source="npm" spec="0.2.16" />
-  <plugin name="org.apache.cordova.media-capture" source="npm" spec="0.3.6" />
-  <plugin name="org.apache.cordova.network-information" source="npm" spec="0.2.15" />
-  <plugin name="org.apache.cordova.splashscreen" source="npm" spec="1.0.0" />
-  <plugin name="org.apache.cordova.vibration" source="npm" spec="0.3.13" />
-  <plugin name="pushwoosh-pgb-plugin" source="npm" />
-  <plugin name="cordova-plugin-whitelist" spec="1.2.1"/>
-  
-  <icon src="icon.png"/>
-  
-  <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi"/>
-  <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi"/>
-  <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi"/>
-  <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi"/>
-  
-  <icon src="res/icon/blackberry/icon-80.png" gap:platform="blackberry"/>
-  <icon src="res/icon/blackberry/icon-80.png" gap:platform="blackberry" gap:state="hover"/>
-  <icon src="res/icon/webos/icon-64.png" gap:platform="webos"/>
-  <icon src="res/icon/windows-phone/icon-48.png" gap:platform="winphone"/>
-  <icon src="res/icon/windows-phone/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
-  
-  <splash src="res/screen/blackberry/screen-225.png" gap:platform="blackberry"/>
-  <splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
-  
-  <access origin="*.pushwoosh.com" />
-  <access origin="*.gravatar.com" />
-  <access origin="*.bootstrapcdn.com" />
-  <access origin="*.youtube.com" />
-  <access origin="https://truecolorsfund.org/?appp=1" subdomains="true" />\
-  <access uri="https://truecolorsfund.org/?appp=1" subdomains="true" />
-  
-  <allow-intent href="http://*/*"/>
-  <allow-intent href="https://*/*"/>
-  <allow-intent href="tel:*"/>
-  <allow-intent href="sms:*"/>
-  <allow-intent href="mailto:*"/>
-  <allow-intent href="geo:*"/>
-  <allow-navigation href="https://truecolorsfund.org/*" />
-  
-  <platform name="android">
-    <allow-intent href="market:*"/>
-    <splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
-    <splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
-    <splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
-    <splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
-  </platform>
-  
-  <platform name="ios">
-    <allow-intent href="itms:*"/>
-    <allow-intent href="itms-apps:*"/>
-    <icon src="res/icon/ios/icon-57.png" width="57" height="57" />
-    <icon src="res/icon/ios/icon-72.png" width="72" height="72" />
-    <icon src="res/icon/ios/icon-76.png" width="76" height="76" />
-    <icon src="res/icon/ios/icon-120.png" width="120" height="120" />
-    <icon src="res/icon/ios/icon-57-2x.png" width="114" height="114" />
-    <icon src="res/icon/ios/icon-72-2x.png" width="144" height="144" />
-    <icon src="res/icon/ios/icon-76-2x.png" width="152" height="152" />
-    <splash src="res/screen/ios/screen-iphone-portrait.png" width="320" height="480"/>
-    <splash src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" height="960"/>
-    <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" height="1136"/>
-    <splash src="res/screen/ios/screen-ipad-portrait.png" width="768" height="1024"/>
-    <splash src="res/screen/ios/screen-ipad-landscape.png" width="1024" height="768"/>
-  </platform>
-  
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "org.truecolorsfund.network"
+        version   = "2.0.0">
+
+    <!-- Change app id (above), name, description, and author. App ID can be any reverse domain name, such as com.mycompany.app -->
+    <name>Forty to None Network</name>
+
+    <description>
+        The Forty to None Network is the True Colors Fund's online community for professionals who are working to address LGBT youth homelessness.
+    </description>
+
+    <author href="https://truecolorsfund.org" email="tech@truecolorsfund.org">
+        True Colors Fund, Inc.
+    </author>
+
+    <preference name="phonegap-version" value="cli-5.2.0" />
+    <preference name="android-minSdkVersion" value="14" /><!-- Android 4.0 is minimum supported -->
+    <feature name="http://api.phonegap.com/1.0/device" />
+
+    <gap:config-file platform="ios" parent="CFBundleShortVersionString"><string>200</string></gap:config-file>
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+
+    <!-- You can comment out features you aren't using -->
+    <gap:plugin name="cordova-plugin-statusbar" source="npm" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+
+    <gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
+    <!-- Have to use gradle for pushwoosh plugin -->
+    <preference name="android-build-tool" value="gradle" />
+
+    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="cordova-plugin-camera" source="npm"  />
+    <gap:plugin name="cordova-plugin-device" source="npm" />
+    <gap:plugin name="cordova-plugin-contacts" source="npm" />
+    <gap:plugin name="cordova-plugin-dialogs" source="npm" />
+    <gap:plugin name="cordova-plugin-file" source="npm" />
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
+    <gap:plugin name="cordova-plugin-geolocation" source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" />
+    <gap:plugin name="cordova-plugin-network-information" source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    <!-- <gap:plugin name="com.telerik.plugins.nativepagetransitions" source="npm" /> -->
+    
+    <!-- Crosswalk enhances Android performance, but makes the app size larger -->
+    <!-- <gap:plugin name="org.crosswalk.engine" version="1.3.0" /> -->
+
+    <!-- to show app faster, set autohide to true. iOS only -->
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+
+    <!-- If you are seeing a blank screen on Android on app load, uncomment SplashScreenDelay preference -->
+    <preference name="SplashScreenDelay" value="10000" />
+
+    <!-- No need to edit below this line -->
+    <gap:splash src="splash.png"/>
+
+    <gap:splash src="res/screen/ios/screen-iphone-portrait.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios" width="640" height="1136" />
+    <gap:splash src="res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768" />
+    <gap:splash src="res/screen/ios/screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024" />
+    <gap:splash src="res/screen/ios/screen-ipad-landscape-2x.png" gap:platform="ios" width="2048" height="1496" />
+    <gap:splash src="res/screen/ios/screen-ipad-portrait-2x.png" gap:platform="ios" width="1536" height="2008" />
+
+    <gap:splash src="res/screen/ios/screen-iphone6-portrait.png" gap:platform="ios" width="750" height="1334" />
+    <gap:splash src="res/screen/ios/screen-iphone6-landscape.png" gap:platform="ios" width="1334" height="750" />
+    <gap:splash src="res/screen/ios/screen-iphone6-plus-portrait.png" gap:platform="ios" width="1242" height="2208" />
+    <gap:splash src="res/screen/ios/screen-iphone6-plus-landscape.png" gap:platform="ios" width="2208" height="1242" />
+
+    <icon src="res/icon/ios/icon-57.png" gap:platform="ios" width="57" height="57" />
+    <icon src="res/icon/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="res/icon/ios/icon-57-2x.png" gap:platform="ios" width="114" height="114" />
+    <icon src="res/icon/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" />
+
+    <!-- iPhone 6 / 6+ -->
+    <icon src="res/icon/ios/icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+
+    <!-- iPhone / iPod Touch  -->
+    <icon src="res/icon/ios/icon-60.png" gap:platform="ios" width="60" height="60" />
+    <icon src="res/icon/ios/icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+
+    <!-- iPad -->
+    <icon src="res/icon/ios/icon-76.png" gap:platform="ios" width="76" height="76" />
+    <icon src="res/icon/ios/icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+
+    <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+    <gap:splash src="res/screen/android/screen-hdpi-landscape.png" gap:platform="android" gap:qualifier="land-hdpi" />
+    <gap:splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="res/screen/android/screen-ldpi-landscape.png" gap:platform="android" gap:qualifier="land-ldpi" />
+    <gap:splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="res/screen/android/screen-mdpi-landscape.png" gap:platform="android" gap:qualifier="land-mdpi" />
+    <gap:splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="res/screen/android/screen-xhdpi-landscape.png" gap:platform="android" gap:qualifier="land-xhdpi" />
+    <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi" />
+
+    <icon src="icon.png" />
+
+    <content src="index.html" />
+    <access origin="*" subdomains="true" />
+
 </widget>
