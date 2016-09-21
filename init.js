@@ -1,14 +1,18 @@
 var appp_settings = {
-	app_offline_toggle: null
+	app_offline_toggle: null,
+	bypass_offline_check: false
 };
 
 // Resources that need to load before initializing scripts
 var remote_resources = {
 	themejs: { status: ''}, // custom.js
 	appp_pg: { status: '', src: 'wp-content/plugins/apppresser/js/apppresser2-plugins.js' }
-}
+};
 
 function onLoad() {
+
+	appTop.conn.preOfflineCheck();
+
 	document.addEventListener("deviceready", onDeviceReady, false);
 	window.addEventListener("message", receiveMessage, false);
 
@@ -102,7 +106,12 @@ function appInit( status ) {
 		}
 
 		if( remote_resources.themejs.status == 'received' && remote_resources.appp_pg.status == 'received' ) {
+			appTop.conn.addCordovaAddonScripts();
 			appTop.remote.init(debug);
+
+			// Let developers know when it's time to init any custom code.
+			document.dispatchEvent( new Event('apppinit') );
+
 		}
 	}
 }

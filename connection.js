@@ -8,6 +8,7 @@ appTop.conn = {
 	timeout_length: 800, // milliseconds to pause before prompting
 	current_mode: '', // online or offline
 	iframe_exists: false,
+	scriptsLoaded: [],
 
 	cacheSelectors: function() {
 		appTop.conn.goOffline = document.getElementById('go-offline');
@@ -87,10 +88,11 @@ appTop.conn = {
 			var n = d.getMilliseconds();
 
 			jQuery('<iframe>', {
-			   src: jQuery('#online').data('iframe') + '&' + n,
+			   src: jQuery('#online').data('iframe') + '&appp_bypass=false&' + n,
 			   id:  'myApp',
 			   frameborder: 0,
-			   scrolling: 'no'
+			   scrolling: 'no',
+			   allowfullscreen: '',
 			   }).appendTo('#online');
 		}
 
@@ -110,6 +112,36 @@ appTop.conn = {
 				src: src,
 				id:  'remote-init',
 			}).appendTo('head');
+		}
+	},
+
+	/**
+	 * Add js files added to the admin settings 'Cordova Add on' tab
+	 * and append them to the index.html <head>
+	 */
+	addCordovaAddonScripts: function() {
+
+		var iframewin = document.getElementById('myApp').contentWindow.window;
+
+		if( typeof iframewin.appp_remote_addon_js !== 'undefined' && window.location.href.indexOf('index.html') > 0) {
+
+			r_src = iframewin.appp_remote_addon_js;
+
+			for (var i = 0; i < r_src.length; i++) {
+
+				filename = r_src[i].replace(/^.*[\\\/]/, '').replace(/(\?.*)|(#.*)/g, '');
+
+				if ( filename in appTop.conn.scriptsLoaded )
+					continue;
+
+				appTop.conn.scriptsLoaded[filename] = r_src[i];
+
+				if( appTop.conn.get_remote_script_status( r_src[i] ) == 200 ) {
+					jQuery('<script>', {
+						src: r_src[i],
+					}).appendTo('head');
+				}	
+			};
 		}
 	},
 
@@ -244,6 +276,13 @@ appTop.conn = {
 		}
 	},
 
+	get_remote_script_status: function( url ) {
+		var http = new XMLHttpRequest();
+		http.open('HEAD', url, false);
+		http.send();
+		return http.status;
+	},
+
 	/**
 	 * Online network connection confirmed, prompt the user with a modal in the offline.html file.
 	 */
@@ -280,12 +319,20 @@ appTop.conn = {
 	},
 
 	/**
+	 * Allow offline checking to be disabled.
+	 * Set appp_settings.bypass_offline_check = true
+	 */
+	preOfflineCheck: function() {
+		appp_settings.bypass_offline_check = (typeof appp_settings.bypass_offline_check !== 'undefined' &&  appp_settings.bypass_offline_check === true);
+	},
+
+	/**
 	 * Check for a network connection before requesting remote resources
 	 */
 	offlineCheck: function() {
 		appTop.conn.debug.log("connection type" + navigator.network.connection.type);
 
-		if(navigator.network.connection.type == Connection.NONE) {
+		if(navigator.network.connection.type == Connection.NONE && appp_settings.bypass_offline_check === false) {
 			appTop.conn.current_mode = 'offline';
 			appTop.conn.online_reset = 0;
 		} else {
